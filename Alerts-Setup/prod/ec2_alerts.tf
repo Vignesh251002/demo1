@@ -1,5 +1,5 @@
 # EC2 Status Check Failed
-resource "aws_cloudwatch_metric_alarm" "ec2_status_check_failed" {
+resource "aws_cloudwatch_metric_alarm" "ec2_status_check_failed" { 
   for_each = toset(var.ec2_instance_ids)
 
   alarm_name = "${var.project_name}-${var.environment}-ec2-${each.key}-status-check-failed"

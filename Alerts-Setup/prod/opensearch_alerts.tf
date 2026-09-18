@@ -1,5 +1,6 @@
 data "aws_caller_identity" "current" {}
 
+
 # OpenSearch Cluster RED
 resource "aws_cloudwatch_metric_alarm" "opensearch_cluster_red" {
   alarm_name = "${var.project_name}-${var.environment}-opensearch-${var.opensearch_domain_name}-cluster-red"

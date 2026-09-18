@@ -34,7 +34,7 @@ resource "aws_cloudwatch_metric_alarm" "ecs_high_cpu" {
   statistic           = "Average"
   period              = 300
   evaluation_periods  = 2
-  threshold           = 70
+  threshold           = 80
   comparison_operator = "GreaterThanThreshold"
   treat_missing_data  = "notBreaching"
 
